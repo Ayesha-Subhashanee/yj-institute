@@ -7,6 +7,7 @@
 <title>YJ Institute | Study & Work in Japan</title>
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -19,49 +20,50 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #222;
     background: #ffffff;
+    color: #222;
     line-height: 1.6;
 }
 
 /* HEADER */
 
 header {
-    background: #0d1b2a;
+    background: #0d1928;
     color: white;
+    padding: 0 8%;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    padding: 16px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .logo {
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .logo span {
-    color: #e63946;
+    color: #e74b50;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
     font-weight: bold;
+    font-size: 16px;
 }
 
 nav a:hover {
-    color: #e63946;
+    color: #e74b50;
 }
 
 /* HERO */
@@ -70,52 +72,53 @@ nav a:hover {
     min-height: 85vh;
 
     background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
         url("IMG_0171.jpeg");
 
-    background-repeat: no-repeat;
     background-position: center center;
+    background-repeat: no-repeat;
     background-size: contain;
     background-color: #666;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
+
     color: white;
-    padding: 30px;
+    padding: 40px 20px;
 }
 
 .hero-content {
-    max-width: 850px;
+    max-width: 950px;
 }
 
 .hero h1 {
-    font-size: 55px;
-    margin-bottom: 15px;
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 25px;
 }
 
 .hero h1 span {
-    color: #ff4d5a;
+    color: #ef565a;
 }
 
 .hero p {
     font-size: 22px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .btn {
     display: inline-block;
-    padding: 14px 28px;
-    margin: 6px;
-    border-radius: 6px;
+    padding: 15px 30px;
+    margin: 7px;
+    border-radius: 7px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 .btn-red {
-    background: #e63946;
+    background: #df494e;
     color: white;
 }
 
@@ -125,250 +128,389 @@ nav a:hover {
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    opacity: 0.88;
 }
 
-/* GENERAL */
+/* GENERAL SECTION */
 
 section {
-    padding: 80px 25px;
-}
-
-.container {
-    max-width: 1150px;
-    margin: auto;
+    padding: 85px 8%;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
 .section-title h2 {
-    font-size: 36px;
-    color: #0d1b2a;
-    margin-bottom: 10px;
+    font-size: 38px;
+    color: #0d1928;
 }
 
 .section-title p {
     color: #666;
+    margin-top: 10px;
 }
 
 /* ABOUT */
 
 .about {
-    background: #f6f7f9;
-}
-
-.about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
 }
 
 .about img {
     width: 100%;
-    height: 430px;
-    object-fit: cover;
-    border-radius: 15px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.about-text h2 {
+    font-size: 40px;
+    color: #0d1928;
+    margin-bottom: 20px;
 }
 
 .about-text h3 {
-    font-size: 30px;
-    margin-bottom: 15px;
-    color: #0d1b2a;
-}
-
-.about-text p {
-    margin-bottom: 15px;
-    color: #555;
-}
-
-/* COURSES */
-
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.course-card {
-    background: white;
-    padding: 35px 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.10);
-    text-align: center;
-    transition: 0.3s;
-}
-
-.course-card:hover {
-    transform: translateY(-8px);
-}
-
-.course-icon {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.course-card h3 {
-    color: #0d1b2a;
+    color: #df494e;
     margin-bottom: 12px;
 }
 
-/* JAPAN PATHWAY */
+.about-text p {
+    margin-bottom: 18px;
+    color: #555;
+}
 
-.pathway {
-    background: #0d1b2a;
+/* SERVICES */
+
+.services-section {
+    background: #f5f7fa;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #0d1928;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+}
+
+/* JAPAN PROGRAM */
+
+.japan-program {
+    background: #0d1928;
     color: white;
 }
 
-.pathway .section-title h2 {
+.japan-program .section-title h2 {
     color: white;
 }
 
-.pathway .section-title p {
-    color: #ccc;
+.japan-program .section-title p {
+    color: #ddd;
 }
 
 .steps {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
 }
 
 .step {
-    background: #16283b;
-    padding: 30px 20px;
-    border-radius: 12px;
     text-align: center;
+    padding: 25px;
 }
 
 .step-number {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
+    background: #df494e;
     margin: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border-radius: 50%;
-    background: #e63946;
+
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
     font-weight: bold;
-    font-size: 20px;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+}
+
+/* COURSE */
+
+.course {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.course img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+.course-info h2 {
+    font-size: 38px;
+    color: #0d1928;
+    margin-bottom: 15px;
+}
+
+.course-info h3 {
+    color: #df494e;
+    margin-bottom: 20px;
+}
+
+.course-info ul {
+    margin: 25px 0;
+    padding-left: 22px;
+}
+
+.course-info li {
+    margin: 10px 0;
 }
 
 /* GALLERY */
 
+.gallery-section {
+    background: #f5f7fa;
+}
+
 .gallery {
-    background: #f6f7f9;
-}
-
-.gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
 }
 
-.gallery-grid img {
+.gallery img {
     width: 100%;
-    height: 260px;
+    height: 300px;
     object-fit: cover;
-    border-radius: 10px;
-    transition: 0.3s;
+    border-radius: 12px;
+    transition: .3s;
 }
 
-.gallery-grid img:hover {
+.gallery img:hover {
     transform: scale(1.03);
 }
 
 /* CONTACT */
 
 .contact {
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info {
+    background: #0d1928;
+    color: white;
+    padding: 45px;
+    border-radius: 18px;
+}
+
+.contact-info h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 18px 0;
 }
 
 .contact-box {
-    max-width: 800px;
-    margin: auto;
-    background: #0d1b2a;
-    color: white;
-    padding: 45px 25px;
-    border-radius: 15px;
+    padding: 45px;
+    background: #f5f7fa;
+    border-radius: 18px;
 }
 
 .contact-box h2 {
-    font-size: 35px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #0d1928;
 }
 
-.contact-box p {
-    margin-bottom: 20px;
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-family: inherit;
+}
+
+.contact-box textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.contact-box button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* WHATSAPP */
 
 .whatsapp {
     position: fixed;
-    right: 22px;
-    bottom: 22px;
+    right: 25px;
+    bottom: 25px;
+
+    width: 65px;
+    height: 65px;
+
     background: #25D366;
     color: white;
-    width: 58px;
-    height: 58px;
+
     border-radius: 50%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     text-decoration: none;
-    font-size: 29px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.25);
-    z-index: 1000;
+    font-size: 31px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.25);
+    z-index: 999;
 }
 
 /* FOOTER */
 
 footer {
-    background: #08121f;
-    color: #ccc;
+    background: #08111d;
+    color: #bbb;
     text-align: center;
-    padding: 25px;
+    padding: 30px;
+}
+
+footer strong {
+    color: white;
 }
 
 /* MOBILE */
 
-@media(max-width: 850px) {
+@media(max-width: 900px) {
 
-    .navbar {
-        flex-direction: column;
+    header {
+        padding: 0 4%;
     }
 
     nav {
-        margin-top: 12px;
+        gap: 12px;
     }
 
     nav a {
-        margin: 7px;
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 75vh;
     }
 
     .hero h1 {
-        font-size: 38px;
+        font-size: 42px;
     }
 
     .hero p {
         font-size: 18px;
     }
 
-    .about-grid,
-    .course-grid,
-    .steps,
-    .gallery-grid {
+    .about,
+    .course,
+    .contact {
         grid-template-columns: 1fr;
     }
 
-    .about img {
-        height: 330px;
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+
+    header {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 72vh;
+        background-size: cover;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .cards,
+    .steps,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: auto;
     }
 }
 
@@ -377,8 +519,9 @@ footer {
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-<div class="navbar">
 
 <div class="logo">
 YJ <span>INSTITUTE</span>
@@ -387,31 +530,38 @@ YJ <span>INSTITUTE</span>
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
-<a href="#courses">Courses</a>
+<a href="#services">Services</a>
+<a href="#course">Courses</a>
 <a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
 </nav>
 
-</div>
 </header>
 
 
-<!-- HOME -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
 <div class="hero-content">
 
-<h1>Your Future in <span>Japan</span> Starts Here</h1>
+<h1>
+Your Future in <span>Japan</span><br>
+Starts Here
+</h1>
 
 <p>
-Professional guidance for students and skilled workers
-who want to study, work and build their future in Japan.
+Professional guidance for students and skilled workers who want
+to study, work and build their future in Japan.
 </p>
 
-<a href="#courses" class="btn btn-red">Explore Programs</a>
+<a href="#services" class="btn btn-red">
+Explore Programs
+</a>
 
-<a href="#contact" class="btn btn-white">Contact Us</a>
+<a href="#contact" class="btn btn-white">
+Contact Us
+</a>
 
 </div>
 
@@ -420,129 +570,127 @@ who want to study, work and build their future in Japan.
 
 <!-- ABOUT -->
 
-<section class="about" id="about">
+<section id="about">
 
-<div class="container">
+<div class="about">
 
-<div class="section-title">
-<h2>About YJ Institute</h2>
-<p>Your trusted pathway to Japan</p>
-</div>
-
-<div class="about-grid">
-
+<div>
 <img src="IMG_2661.jpeg" alt="YJ Institute">
+</div>
 
 <div class="about-text">
 
-<h3>Study. Work. Succeed in Japan.</h3>
+<h3>WELCOME TO YJ INSTITUTE</h3>
+
+<h2>Your Trusted Pathway to Japan</h2>
 
 <p>
-YJ Institute supports students and skilled workers who are
-planning to build their future in Japan.
+YJ Institute provides professional guidance and support for
+students and skilled workers who wish to build their future in Japan.
 </p>
 
 <p>
-We provide guidance throughout the process, from Japanese
-language preparation and examinations to study and employment
-pathways.
+From Japanese language education and exam preparation to student
+visa and SSW guidance, we support you throughout your journey.
 </p>
 
 <p>
-Our goal is to help every student move forward with confidence
-and a clear understanding of their pathway.
+Our goal is to provide reliable information, quality education
+and professional support for every student.
 </p>
 
-<a href="#contact" class="btn btn-red">Talk to Us</a>
+<a href="#contact" class="btn btn-red">
+Talk to Us
+</a>
 
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<!-- COURSES -->
+<!-- SERVICES -->
 
-<section id="courses">
-
-<div class="container">
+<section class="services-section" id="services">
 
 <div class="section-title">
-<h2>Our Programs</h2>
-<p>Prepare yourself for opportunities in Japan</p>
+
+<h2>Our Services</h2>
+
+<p>
+Everything you need to begin your journey to Japan.
+</p>
+
 </div>
 
-<div class="course-grid">
+<div class="cards">
 
-<div class="course-card">
-<div class="course-icon">🇯🇵</div>
+<div class="card">
+<div class="icon">🇯🇵</div>
 <h3>Japanese Language</h3>
 <p>
-Japanese language preparation for students planning
-to study or work in Japan.
+Learn Japanese with structured lessons and professional guidance.
 </p>
 </div>
 
-<div class="course-card">
-<div class="course-icon">🎓</div>
+<div class="card">
+<div class="icon">🎓</div>
 <h3>Student Visa Guidance</h3>
 <p>
-Guidance for Japanese language school applications
-and student pathways.
+Support with school selection, documentation and the Japan student visa process.
 </p>
 </div>
 
-<div class="course-card">
-<div class="course-icon">💼</div>
+<div class="card">
+<div class="icon">💼</div>
 <h3>SSW Programs</h3>
 <p>
-Preparation and guidance for Specified Skilled Worker
-opportunities in Japan.
+Guidance for candidates interested in Japan's Specified Skilled Worker pathway.
 </p>
 </div>
 
-<div class="course-card">
-<div class="course-icon">👩‍⚕️</div>
+<div class="card">
+<div class="icon">❤️</div>
 <h3>Caregiver</h3>
 <p>
-Preparation and guidance for caregiver sector
-opportunities under the SSW pathway.
+Preparation and guidance for candidates interested in Japan's caregiving sector.
 </p>
 </div>
 
-<div class="course-card">
-<div class="course-icon">🏗️</div>
+<div class="card">
+<div class="icon">🏗️</div>
 <h3>Construction</h3>
 <p>
-Support for candidates interested in Japan's
-construction sector.
+Support and guidance for skilled workers interested in construction opportunities.
 </p>
 </div>
 
-<div class="course-card">
-<div class="course-icon">🍱</div>
+<div class="card">
+<div class="icon">🍱</div>
 <h3>Food Service</h3>
 <p>
-Training guidance for food service related
-employment opportunities in Japan.
+Preparation and guidance for candidates interested in Japan's food service sector.
 </p>
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<!-- PATHWAY -->
+<!-- JAPAN PATHWAY -->
 
-<section class="pathway">
-
-<div class="container">
+<section class="japan-program">
 
 <div class="section-title">
-<h2>Your Pathway to Japan</h2>
-<p>We guide you step by step</p>
+
+<h2>Your Journey to Japan</h2>
+
+<p>
+We guide you step by step.
+</p>
+
 </div>
 
 <div class="steps">
@@ -550,107 +698,218 @@ employment opportunities in Japan.
 <div class="step">
 <div class="step-number">1</div>
 <h3>Contact Us</h3>
-<p>Discuss your goals and choose the right pathway.</p>
+<p>Tell us about your goals and future plans.</p>
 </div>
 
 <div class="step">
 <div class="step-number">2</div>
 <h3>Preparation</h3>
-<p>Prepare your Japanese language and required examinations.</p>
+<p>Language, exams and required documents.</p>
 </div>
 
 <div class="step">
 <div class="step-number">3</div>
 <h3>Application</h3>
-<p>Receive guidance for your school or employment application.</p>
+<p>Professional support throughout the application process.</p>
 </div>
 
 <div class="step">
 <div class="step-number">4</div>
 <h3>Japan</h3>
-<p>Move forward towards your study or career journey in Japan.</p>
+<p>Start your new study or career journey in Japan.</p>
 </div>
 
 </div>
+
+</section>
+
+
+<!-- COURSE -->
+
+<section id="course">
+
+<div class="course">
+
+<div class="course-info">
+
+<h3>START YOUR JOURNEY</h3>
+
+<h2>Japanese Language & Japan Preparation</h2>
+
+<p>
+Build the knowledge and confidence you need before beginning
+your journey to Japan.
+</p>
+
+<ul>
+<li>Japanese language lessons</li>
+<li>JLPT preparation</li>
+<li>SSW exam guidance</li>
+<li>Student visa consultation</li>
+<li>Document preparation guidance</li>
+<li>Japan lifestyle and cultural guidance</li>
+</ul>
+
+<a href="#contact" class="btn btn-red">
+Join YJ Institute
+</a>
+
 </div>
+
+<div>
+<img src="IMG_3452.jpeg" alt="YJ Institute Course">
+</div>
+
+</div>
+
 </section>
 
 
 <!-- GALLERY -->
 
-<section class="gallery" id="gallery">
-
-<div class="container">
+<section class="gallery-section" id="gallery">
 
 <div class="section-title">
+
 <h2>Our Gallery</h2>
-<p>YJ Institute activities and memories</p>
-</div>
 
-<div class="gallery-grid">
-
-<img src="IMG_3452.jpeg" alt="YJ Institute">
-<img src="IMG_3453.jpeg" alt="YJ Institute">
-<img src="IMG_3454.jpeg" alt="YJ Institute">
-
-<img src="IMG_3455.jpeg" alt="YJ Institute">
-<img src="IMG_3456.jpeg" alt="YJ Institute">
-<img src="IMG_3457.jpeg" alt="YJ Institute">
-
-<img src="IMG_3462.jpeg" alt="YJ Institute">
-<img src="d8e6e448-bedd-470f-9dd0-bd33b105ecc4.jpeg" alt="YJ Institute">
-<img src="IMG_0171.jpeg" alt="YJ Institute">
+<p>
+A glimpse of YJ Institute activities and our journey.
+</p>
 
 </div>
 
+<div class="gallery">
+
+<img src="IMG_3452.jpeg" alt="YJ Institute Gallery">
+<img src="IMG_3453.jpeg" alt="YJ Institute Gallery">
+<img src="IMG_3454.jpeg" alt="YJ Institute Gallery">
+
+<img src="IMG_3455.jpeg" alt="YJ Institute Gallery">
+<img src="IMG_3456.jpeg" alt="YJ Institute Gallery">
+<img src="IMG_3457.jpeg" alt="YJ Institute Gallery">
+
+<img src="IMG_3462.jpeg" alt="YJ Institute Gallery">
+<img src="d8e6e448-bedd-470f-9dd0-bd33b105ecc4.jpeg" alt="YJ Institute Gallery">
+<img src="IMG_0171.jpeg" alt="YJ Institute Gallery">
+
 </div>
+
 </section>
 
 
 <!-- CONTACT -->
 
-<section class="contact" id="contact">
+<section id="contact">
 
-<div class="container">
+<div class="section-title">
+
+<h2>Contact YJ Institute</h2>
+
+<p>
+Ready to start your journey to Japan? Contact us today.
+</p>
+
+</div>
+
+<div class="contact">
+
+<div class="contact-info">
+
+<h2>Let's Talk</h2>
+
+<p>
+📍 Imaduwa, Sri Lanka
+</p>
+
+<p>
+📞 Sri Lanka: 077 202 8187
+</p>
+
+<p>
+📞 Japan: +81 80 3386 3351
+</p>
+
+<p>
+🇯🇵 Study • Work • Build Your Future in Japan
+</p>
+
+<a
+href="https://wa.me/94772028187"
+class="btn btn-red">
+Chat on WhatsApp
+</a>
+
+</div>
+
 
 <div class="contact-box">
 
-<h2>Start Your Journey to Japan 🇯🇵</h2>
+<h2>Send Us a Message</h2>
 
-<p>
-Contact YJ Institute today for more information about
-our programs and application guidance.
-</p>
+<input id="name" type="text" placeholder="Your Name">
 
-<a href="tel:+818033863351" class="btn btn-white">
-📞 +81 803 386 335 1
-</a>
+<input id="phone" type="text" placeholder="Phone Number">
 
-<a href="https://wa.me/94772028187"
-class="btn btn-red"
-target="_blank">
-WhatsApp Us
-</a>
+<textarea id="message" placeholder="How can we help you?"></textarea>
+
+<button class="btn btn-red" onclick="sendWhatsApp()">
+Send via WhatsApp
+</button>
 
 </div>
 
 </div>
+
 </section>
 
 
-<a href="https://wa.me/94772028187"
+<!-- WHATSAPP FLOATING BUTTON -->
+
+<a
 class="whatsapp"
-target="_blank"
+href="https://wa.me/94772028187"
 aria-label="WhatsApp">
-☏
+☎
 </a>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-<p>© 2026 YJ Institute. All Rights Reserved.</p>
+<p>
+© 2026 <strong>YJ Institute</strong>. All Rights Reserved.
+</p>
+
+<p>
+Your Pathway to Study & Work in Japan
+</p>
 
 </footer>
+
+
+<script>
+
+function sendWhatsApp() {
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let message = document.getElementById("message").value;
+
+    let text =
+        "Hello YJ Institute,%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Message: " + encodeURIComponent(message);
+
+    window.open(
+        "https://wa.me/94772028187?text=" + text,
+        "_blank"
+    );
+}
+
+</script>
 
 </body>
 </html>
