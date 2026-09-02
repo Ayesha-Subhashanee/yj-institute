@@ -1,722 +1,1212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>YJ Institute | Japanese Language & Study Pathways</title>
+<title>Yatagarasu Japanese Institute</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #111;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    /* =========================
-       HEADER
-    ========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #252525;
+    line-height: 1.6;
+}
 
-    header {
-      height: 82px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 7%;
-      border-bottom: 1px solid #eeeeee;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+/* =========================
+   HEADER
+========================= */
 
-    .brand-circle {
-      width: 42px;
-      height: 42px;
-      border: 1px solid #aaa;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 11px;
-    }
+header {
+    height: 92px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
 
-    .brand-text h2 {
-      font-size: 16px;
-      letter-spacing: 0.8px;
-      font-weight: 700;
-    }
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-    .brand-text p {
-      color: #dc3e43;
-      font-size: 9px;
-      margin-top: 2px;
-      letter-spacing: 1px;
-    }
+.brand-logo {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+}
 
-    nav {
-      display: flex;
-      gap: 27px;
-      align-items: center;
-    }
+.brand-text h2 {
+    font-size: 17px;
+    letter-spacing: .8px;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #222;
-      font-size: 13px;
-      font-weight: 600;
-    }
+.brand-text p {
+    font-size: 11px;
+    color: #d8313b;
+    margin-top: 2px;
+    letter-spacing: 1px;
+}
 
-    nav a:hover {
-      color: #dd3d42;
-    }
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
 
-    .contact-nav {
-      color: #fff !important;
-      background: linear-gradient(135deg, #e52b34, #f28b51);
-      padding: 13px 20px;
-      border-radius: 8px;
-      box-shadow: 0 5px 14px rgba(225, 45, 55, 0.24);
-    }
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+}
 
-    /* =========================
-       HERO
-    ========================= */
+nav a:hover {
+    color: #df2b35;
+}
 
-    .hero {
-      min-height: 570px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 70px 7%;
-      overflow: hidden;
+.contact-nav {
+    color: white !important;
+    padding: 13px 22px;
+    border-radius: 8px;
+    background: linear-gradient(135deg,#ed1c24,#f26a43);
+}
 
-      background:
-        linear-gradient(
-          90deg,
-          rgba(8,8,8,0.87) 0%,
-          rgba(8,8,8,0.78) 35%,
-          rgba(8,8,8,0.42) 100%
-        ),
-        url("IMG_3452.jpeg");
 
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+/* =========================
+   HERO
+========================= */
 
-    .hero-inner {
-      width: 100%;
-      max-width: 1280px;
-      margin: auto;
+.hero {
+    min-height: 610px;
+    padding: 75px 7%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 
-      display: grid;
-      grid-template-columns: 1.35fr 0.75fr;
-      align-items: center;
-      gap: 60px;
-    }
+    background:
+      linear-gradient(
+        90deg,
+        rgba(8,8,8,.86) 0%,
+        rgba(8,8,8,.70) 45%,
+        rgba(8,8,8,.35) 100%
+      ),
+      url("IMG_2661.jpeg");
 
-    /* LEFT HERO */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
-    .hero-left {
-      color: white;
-      max-width: 750px;
-    }
+.hero-inner {
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.35fr .75fr;
+    gap: 65px;
+    align-items: center;
+}
 
-    .hero-small {
-      color: #f2c92f;
-      font-size: 12px;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 18px;
-    }
+.hero-left {
+    color: #fff;
+}
 
-    .hero-left h1 {
-      font-size: 62px;
-      line-height: 1.05;
-      font-weight: 800;
-      margin-bottom: 20px;
-      letter-spacing: -2px;
-    }
+.hero-small {
+    color: #f5d23b;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
 
-    .hero-left p {
-      max-width: 680px;
-      font-size: 17px;
-      color: #eeeeee;
-      line-height: 1.7;
-      margin-bottom: 28px;
-    }
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin-bottom: 22px;
+    max-width: 760px;
+    letter-spacing: -2px;
+}
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-    }
+.hero-left p {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-bottom: 28px;
+    color: #f0f0f0;
+}
 
-    .button {
-      display: inline-block;
-      text-decoration: none;
-      padding: 14px 22px;
-      border-radius: 7px;
-      font-weight: 700;
-      font-size: 13px;
-    }
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
 
-    .button-red {
-      background: linear-gradient(135deg, #e61f29, #ff4b43);
-      color: white;
-      box-shadow: 0 7px 18px rgba(230, 31, 41, 0.35);
-    }
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 23px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 14px;
+}
 
-    .button-dark {
-      background: rgba(0,0,0,0.22);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.75);
-    }
+.btn-red {
+    color: #fff;
+    background: linear-gradient(135deg,#ed1c24,#ff4c42);
+    box-shadow: 0 6px 16px rgba(240,30,40,.30);
+}
 
-    /* RIGHT CARD */
+.btn-dark {
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.8);
+    background: rgba(0,0,0,.25);
+}
 
-    .hero-card {
-      background: rgba(255,255,255,0.96);
-      border-radius: 18px;
-      padding: 34px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-      border-top: 4px solid #e64c4f;
-      transform: rotate(-1deg);
-    }
 
-    .hero-card-logo {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      border: 1px solid #bbb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 12px;
-      margin-bottom: 20px;
-    }
+/* HERO CARD */
 
-    .hero-card h3 {
-      font-size: 25px;
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
+.hero-card {
+    background: rgba(255,255,255,.97);
+    border-radius: 20px;
+    padding: 38px;
+    border-top: 4px solid #e52e37;
+    box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
 
-    .hero-card p {
-      font-size: 14px;
-      color: #777;
-      line-height: 1.6;
-      margin-bottom: 18px;
-    }
+.card-mini-logo {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
 
-    .hero-card .phone {
-      color: #d8454a;
-      font-weight: 700;
-      font-size: 17px;
-    }
+.hero-card h3 {
+    font-size: 27px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
 
-    /* =========================
-       COLOR LINE
-    ========================= */
+.hero-card p {
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
 
-    .colour-line {
-      width: 100%;
-      height: 6px;
-      display: flex;
-    }
+.hero-card .phone {
+    color: #d73e46;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-    .line-red {
-      width: 72%;
-      background: #ed1c24;
-    }
 
-    .line-yellow {
-      width: 28%;
-      background: #f4c430;
-    }
+/* COLOUR LINE */
 
-    /* =========================
-       MISSION
-    ========================= */
+.colour-line {
+    display: flex;
+    height: 6px;
+}
 
-    .mission {
-      padding: 85px 8%;
-      background: #fff;
-      text-align: center;
-    }
+.colour-red {
+    width: 72%;
+    background: #ed1c24;
+}
 
-    .mission-small {
-      color: #d44a4d;
-      font-size: 11px;
-      letter-spacing: 2px;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
+.colour-yellow {
+    width: 28%;
+    background: #f6c821;
+}
 
-    .mission h2 {
-      font-size: 44px;
-      font-weight: 500;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
 
-    .mission p {
-      color: #666;
-      max-width: 800px;
-      margin: auto;
-      font-size: 17px;
-      line-height: 1.8;
-    }
+/* =========================
+   MISSION
+========================= */
 
-    /* =========================
-       SERVICES
-    ========================= */
+.mission {
+    padding: 100px 7%;
+}
 
-    .services {
-      background: #f7f7f7;
-      padding: 80px 8%;
-    }
+.mission-inner {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: .9fr 1.2fr;
+    gap: 65px;
+    align-items: center;
+}
 
-    .section-heading {
-      text-align: center;
-      margin-bottom: 45px;
-    }
+.mission-photo img {
+    width: 100%;
+    border-radius: 18px;
+    display: block;
+}
 
-    .section-heading h2 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+.section-label {
+    color: #c84046;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
 
-    .section-heading p {
-      color: #666;
+.mission h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.mission-text > p {
+    color: #666;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.mission-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.mission-box {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.mission-box h4 {
+    color: #c73c44;
+    margin-bottom: 5px;
+}
+
+.mission-box p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   WHAT WE DO
+========================= */
+
+.services {
+    padding: 90px 7%;
+    background: #fafafa;
+}
+
+.services-inner {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.services h2 {
+    font-size: 46px;
+    line-height: 1.15;
+    font-weight: 500;
+    max-width: 650px;
+    margin-bottom: 15px;
+}
+
+.services-intro {
+    color: #777;
+    margin-bottom: 42px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 26px;
+    border-radius: 13px;
+}
+
+.service-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+    background: #fff0f1;
+    color: #d73841;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    margin-bottom: 9px;
+    font-size: 18px;
+}
+
+.service-card p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   COURSE
+========================= */
+
+.course {
+    padding: 90px 7%;
+    background: #fff;
+}
+
+.course-inner {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.course h2 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.1;
+    max-width: 700px;
+    margin-bottom: 12px;
+}
+
+.course-description {
+    color: #777;
+    margin-bottom: 42px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.course-card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.course-card-header {
+    background: linear-gradient(135deg,#e31c2a,#f0363f);
+    color: white;
+    padding: 25px;
+}
+
+.course-card-header small {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.course-card-header h3 {
+    margin-top: 6px;
+    font-size: 19px;
+}
+
+.course-card-body {
+    padding: 25px;
+}
+
+.course-card-body ul {
+    padding-left: 20px;
+}
+
+.course-card-body li {
+    color: #707070;
+    margin-bottom: 10px;
+}
+
+.course-focus {
+    background: #fff7cb;
+    border: 1px solid #eadb7f;
+    margin-top: 28px;
+    border-radius: 10px;
+    padding: 14px 18px;
+    color: #666;
+}
+
+
+/* =========================
+   LEADERSHIP
+========================= */
+
+.leadership {
+    background: #1c1516;
+    color: #fff;
+    padding: 90px 7%;
+}
+
+.leadership-inner {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.leadership .section-label {
+    color: #ff5158;
+}
+
+.leadership h2 {
+    font-size: 48px;
+    max-width: 650px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+.leadership-intro {
+    color: #c8bbbb;
+    margin-bottom: 38px;
+}
+
+.leader-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.leader-card {
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 16px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    background: rgba(255,255,255,.04);
+}
+
+.leader-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 270px;
+    object-fit: cover;
+}
+
+.leader-info {
+    padding: 28px;
+}
+
+.leader-info small {
+    color: #ff7479;
+    font-weight: bold;
+}
+
+.leader-info h3 {
+    font-size: 25px;
+    margin: 8px 0 12px;
+}
+
+.leader-info p {
+    color: #ddd0d0;
+    font-size: 14px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    padding: 90px 7%;
+    background: #fff;
+}
+
+.gallery-inner {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.gallery-section h2 {
+    font-size: 46px;
+    margin-bottom: 35px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #f6f6f6;
+    padding: 90px 7%;
+}
+
+.contact-inner {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #111;
+    color: #aaa;
+    padding: 28px;
+    text-align: center;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 950px) {
+
+    .hero-inner,
+    .mission-inner {
+        grid-template-columns: 1fr;
     }
 
     .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      max-width: 1200px;
-      margin: auto;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .service-card {
-      background: #fff;
-      padding: 32px;
-      border-radius: 14px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    .course-grid {
+        grid-template-columns: 1fr;
     }
 
-    .service-card h3 {
-      margin-bottom: 12px;
-      font-size: 20px;
-    }
-
-    .service-card p {
-      color: #666;
-      line-height: 1.6;
-      font-size: 15px;
-    }
-
-    /* =========================
-       COURSE
-    ========================= */
-
-    .course {
-      padding: 85px 8%;
-      background: white;
-    }
-
-    .course-inner {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .course img {
-      width: 100%;
-      border-radius: 15px;
-    }
-
-    .course h2 {
-      font-size: 38px;
-      margin-bottom: 18px;
-    }
-
-    .course p {
-      color: #666;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    /* =========================
-       GALLERY
-    ========================= */
-
-    .gallery-section {
-      padding: 80px 8%;
-      background: #f8f8f8;
+    .leader-grid {
+        grid-template-columns: 1fr;
     }
 
     .gallery-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+}
+
+@media(max-width: 650px) {
+
+    header {
+        height: auto;
+        padding: 16px;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .mission h2,
+    .services h2,
+    .course h2,
+    .leadership h2 {
+        font-size: 34px;
+    }
+
+    .service-grid,
+    .mission-boxes,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leader-card {
+        grid-template-columns: 1fr;
+    }
+
+    .leader-card img {
+        height: 320px;
     }
 
     .gallery-grid img {
-      width: 100%;
-      height: 270px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact-section {
-      padding: 80px 8%;
-      background: #111;
-      color: white;
-      text-align: center;
-    }
-
-    .contact-section h2 {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .contact-section p {
-      color: #ccc;
-      margin-bottom: 24px;
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media(max-width: 900px) {
-
-      nav {
-        gap: 12px;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-left h1 {
-        font-size: 48px;
-      }
-
-      .hero-card {
-        max-width: 450px;
-        transform: none;
-      }
-
-      .service-grid,
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .course-inner {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media(max-width: 600px) {
-
-      header {
         height: auto;
-        flex-direction: column;
-        padding: 15px;
-        gap: 15px;
-      }
-
-      nav {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 60px 6%;
-      }
-
-      .hero-left h1 {
-        font-size: 39px;
-      }
-
-      .hero-left p {
-        font-size: 15px;
-      }
-
-      .hero-buttons {
-        flex-wrap: wrap;
-      }
-
-      .mission h2 {
-        font-size: 33px;
-      }
-
-      .service-grid,
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid img {
-        height: auto;
-      }
     }
+}
 
-  </style>
+</style>
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
 
-  <div class="brand">
+<div class="brand">
 
-    <div class="brand-circle">
-      YJ
+    <div class="brand-logo">
+        YJ
     </div>
 
     <div class="brand-text">
-      <h2>YJ INSTITUTE</h2>
-      <p>JAPANESE LANGUAGE & STUDY PATHWAYS</p>
+        <h2>YATAGARASU JAPANESE INSTITUTE</h2>
+        <p>八咫烏日本語学院</p>
     </div>
 
-  </div>
+</div>
 
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#course">Course</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact" class="contact-nav">Contact</a>
-  </nav>
+<nav>
+
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#course">Course</a>
+<a href="#gallery">Gallery</a>
+<a href="#leadership">Partners</a>
+<a href="#contact" class="contact-nav">Contact</a>
+
+</nav>
 
 </header>
 
 
+
+<!-- HERO -->
+
 <section class="hero">
 
-  <div class="hero-inner">
+<div class="hero-inner">
 
-    <div class="hero-left">
+<div class="hero-left">
 
-      <div class="hero-small">
-        — Japanese Language & Study Pathways
-      </div>
+<div class="hero-small">
+— Japanese Language & Study Pathways
+</div>
 
-      <h1>
-        Your journey to Japan<br>
-        starts here.
-      </h1>
+<h1>
+Your journey to Japan<br>
+starts here.
+</h1>
 
-      <p>
-        Language education, JLPT preparation, school guidance,
-        student visa support and career pathway assistance —
-        delivered with practical, personal guidance.
-      </p>
+<p>
+Language education, JLPT preparation, school guidance,
+student visa support and career pathway assistance —
+delivered with practical, personal guidance.
+</p>
 
-      <div class="hero-buttons">
+<div class="hero-buttons">
 
-        <a href="#contact" class="button button-red">
-          Start your enquiry →
-        </a>
+<a href="#contact" class="btn btn-red">
+Start your enquiry →
+</a>
 
-        <a href="https://wa.me/94772028187" class="button button-dark">
-          WhatsApp us
-        </a>
+<a href="https://wa.me/94772028187" class="btn btn-dark">
+WhatsApp us
+</a>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
 
-    <div class="hero-card">
 
-      <div class="hero-card-logo">
-        YJ
-      </div>
+<div class="hero-card">
 
-      <h3>Speak with our team</h3>
+<div class="card-mini-logo">
+YJ
+</div>
 
-      <p>
-        Get clear information about Japanese courses,
-        study pathways and your next application step.
-      </p>
+<h3>Speak with our team</h3>
 
-      <div class="phone">
-        +81 80-3386-3351
-      </div>
+<p>
+Get clear information about Japanese courses,
+study pathways and your next application step.
+</p>
 
-    </div>
+<div class="phone">
++81 80-3386-3351
+</div>
 
-  </div>
+</div>
+
+</div>
 
 </section>
 
 
 <div class="colour-line">
-  <div class="line-red"></div>
-  <div class="line-yellow"></div>
+<div class="colour-red"></div>
+<div class="colour-yellow"></div>
 </div>
 
 
+
+<!-- MISSION -->
+
 <section class="mission" id="about">
 
-  <div class="mission-small">
-    — Our Mission
-  </div>
+<div class="mission-inner">
 
-  <h2>
-    Guidance that prepares<br>
-    you for Japan
-  </h2>
+<div class="mission-photo">
+<img src="IMG_3452.jpeg" alt="Yatagarasu Japanese Institute">
+</div>
 
-  <p>
-    We provide Japanese language education, study guidance,
-    visa preparation support and career pathway assistance
-    to help students confidently prepare for their future in Japan.
-  </p>
+<div class="mission-text">
+
+<div class="section-label">
+— Our Mission
+</div>
+
+<h2>
+Guidance that prepares students
+for real life in Japan.
+</h2>
+
+<p>
+Yatagarasu Japanese Institute supports students who want to learn
+Japanese, continue their studies and build career opportunities
+connected to Japan.
+</p>
+
+<p>
+We focus on clear instruction, careful document guidance and
+confidence for everyday communication. From your first lesson
+to application preparation, our goal is to make every stage
+organised, understandable and connected to your future.
+</p>
+
+
+<div class="mission-boxes">
+
+<div class="mission-box">
+<h4>Language first</h4>
+<p>Practical Japanese from foundations to JLPT preparation.</p>
+</div>
+
+<div class="mission-box">
+<h4>Personal guidance</h4>
+<p>Support based on each student's goal.</p>
+</div>
+
+<div class="mission-box">
+<h4>Japan connections</h4>
+<p>Educational links and professional guidance.</p>
+</div>
+
+<div class="mission-box">
+<h4>Complete pathway</h4>
+<p>Study, visa preparation and pre-departure support.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
+
+
+<!-- SERVICES -->
 
 <section class="services" id="services">
 
-  <div class="section-heading">
-    <h2>Our Services</h2>
-    <p>Practical guidance for your Japan journey.</p>
-  </div>
+<div class="services-inner">
 
-  <div class="service-grid">
+<div class="section-label">
+— What We Do
+</div>
 
-    <div class="service-card">
-      <h3>Japanese Language</h3>
-      <p>
-        Learn Japanese with structured lessons and JLPT preparation.
-      </p>
-    </div>
+<h2>
+Language, study and career support.
+</h2>
 
-    <div class="service-card">
-      <h3>Study in Japan</h3>
-      <p>
-        School guidance, document preparation and student visa support.
-      </p>
-    </div>
+<p class="services-intro">
+Focused services for students preparing to study or work in Japan.
+</p>
 
-    <div class="service-card">
-      <h3>SSW Guidance</h3>
-      <p>
-        Preparation and support for Specified Skilled Worker pathways.
-      </p>
-    </div>
 
-  </div>
+<div class="service-grid">
+
+<div class="service-card">
+
+<div class="service-icon">あ</div>
+
+<h3>Japanese Language</h3>
+
+<p>
+Structured study covering scripts, vocabulary, grammar,
+listening and reading.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">N5</div>
+
+<h3>JLPT Preparation</h3>
+
+<p>
+Progressive preparation for JLPT N5 with revision and
+exam-focused guidance.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">学</div>
+
+<h3>Student Visa Guidance</h3>
+
+<p>
+School selection, application organisation,
+document checking and COE guidance.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">働</div>
+
+<h3>Work & SSW Pathways</h3>
+
+<p>
+Information on suitable working visas
+and Specified Skilled Worker pathways.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
+
+
+<!-- COURSE -->
 
 <section class="course" id="course">
 
-  <div class="course-inner">
+<div class="course-inner">
 
-    <div>
+<div class="section-label">
+— Japanese Course
+</div>
 
-      <h2>
-        Prepare for your future in Japan
-      </h2>
+<h2>
+A three-month foundation pathway.
+</h2>
 
-      <p>
-        YJ Institute helps students prepare with Japanese language,
-        JLPT guidance, school applications and practical support
-        throughout their journey.
-      </p>
+<p class="course-description">
+A 12-week course moving from Hiragana and Katakana
+to practical N5-level sentence patterns.
+</p>
 
-      <a href="#contact" class="button button-red">
-        Learn More
-      </a>
 
-    </div>
+<div class="course-grid">
 
-    <img src="IMG_3453.jpeg" alt="YJ Institute course">
 
-  </div>
+<div class="course-card">
+
+<div class="course-card-header">
+
+<small>WEEKS 1–4</small>
+
+<h3>Foundations & Basic Actions</h3>
+
+</div>
+
+<div class="course-card-body">
+
+<ul>
+<li>Hiragana and Katakana</li>
+<li>Self-introduction and greetings</li>
+<li>Basic sentence patterns</li>
+<li>Daily actions and descriptions</li>
+</ul>
+
+</div>
+
+</div>
+
+
+
+<div class="course-card">
+
+<div class="course-card-header">
+
+<small>WEEKS 5–8</small>
+
+<h3>Counting & Te-form</h3>
+
+</div>
+
+<div class="course-card-body">
+
+<ul>
+<li>Kanji and quantities</li>
+<li>Family, time and routines</li>
+<li>Verb groups and Te-form</li>
+<li>Directions, actions and health</li>
+</ul>
+
+</div>
+
+</div>
+
+
+
+<div class="course-card">
+
+<div class="course-card-header">
+
+<small>WEEKS 9–12</small>
+
+<h3>Advanced N5 Structures</h3>
+
+</div>
+
+<div class="course-card-body">
+
+<ul>
+<li>Plain forms and casual speech</li>
+<li>Abilities and opinions</li>
+<li>Modifiers and sentences</li>
+<li>N5 revision and mock practice</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="course-focus">
+
+Course focus: Scripts, vocabulary, Minna no Nihongo lessons,
+grammar, listening, reading and practical conversation.
+
+</div>
+
+</div>
 
 </section>
 
+
+
+<!-- LEADERSHIP -->
+
+<section class="leadership" id="leadership">
+
+<div class="leadership-inner">
+
+<div class="section-label">
+— Leadership & Partners
+</div>
+
+<h2>
+Experience across Sri Lanka and Japan.
+</h2>
+
+<p class="leadership-intro">
+People and partnerships supporting language education and student pathways.
+</p>
+
+
+<div class="leader-grid">
+
+
+<div class="leader-card">
+
+<img src="IMG_3455.jpeg" alt="Founder">
+
+<div class="leader-info">
+
+<small>FOUNDER</small>
+
+<h3>Suranga Dinesh</h3>
+
+<p>
+A professional with extensive experience in Japan,
+Japanese language knowledge and international business
+experience supporting educational connections.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="leader-card">
+
+<img src="IMG_3456.jpeg" alt="Japan Education Connection">
+
+<div class="leader-info">
+
+<small>JAPAN EDUCATION CONNECTION</small>
+
+<h3>Ozawa Kenji & Partners</h3>
+
+<p>
+Professional connections with Japanese education representatives,
+including leadership from language education organisations in Japan.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- GALLERY -->
 
 <section class="gallery-section" id="gallery">
 
-  <div class="section-heading">
-    <h2>Gallery</h2>
-    <p>YJ Institute activities and moments.</p>
-  </div>
+<div class="gallery-inner">
 
-  <div class="gallery-grid">
+<div class="section-label">
+— Gallery
+</div>
 
-    <img src="IMG_3452.jpeg" alt="">
-    <img src="IMG_3453.jpeg" alt="">
-    <img src="IMG_3454.jpeg" alt="">
-    <img src="IMG_3455.jpeg" alt="">
-    <img src="IMG_3456.jpeg" alt="">
-    <img src="IMG_3457.jpeg" alt="">
-    <img src="IMG_3462.jpeg" alt="">
+<h2>
+Our Institute & Activities
+</h2>
 
-  </div>
+
+<div class="gallery-grid">
+
+<img src="IMG_3452.jpeg" alt="">
+<img src="IMG_3453.jpeg" alt="">
+<img src="IMG_3454.jpeg" alt="">
+<img src="IMG_3455.jpeg" alt="">
+<img src="IMG_3456.jpeg" alt="">
+<img src="IMG_3457.jpeg" alt="">
+<img src="IMG_3462.jpeg" alt="">
+<img src="IMG_0171.jpeg" alt="">
+<img src="d8e6e448-bedd-470f-9dd0-bd33b105ecc4.jpeg" alt="">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="contact-inner">
+
+<div class="section-label">
+— Contact Us
+</div>
+
+<h2>
+Start your journey to Japan.
+</h2>
+
+<p>
+Contact Yatagarasu Japanese Institute for course,
+study and Japan pathway information.
+</p>
+
+<a
+href="https://wa.me/94772028187"
+class="btn btn-red">
+Contact on WhatsApp
+</a>
+
+</div>
 
 </section>
 
 
-<section class="contact-section" id="contact">
 
-  <h2>
-    Start your journey to Japan
-  </h2>
+<footer>
 
-  <p>
-    Speak with the YJ Institute team today.
-  </p>
+© 2026 Yatagarasu Japanese Institute. All Rights Reserved.
 
-  <a href="https://wa.me/94772028187" class="button button-red">
-    Contact on WhatsApp
-  </a>
+</footer>
 
-</section>
 
 </body>
 </html>
