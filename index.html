@@ -1,915 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>YJ Institute | Study & Work in Japan</title>
-
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #222;
-    line-height: 1.6;
-}
-
-/* HEADER */
-
-header {
-    background: #0d1928;
-    color: white;
-    padding: 0 8%;
-    height: 85px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.logo span {
-    color: #e74b50;
-}
-
-nav {
-    display: flex;
-    gap: 35px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-nav a:hover {
-    color: #e74b50;
-}
-
-/* HERO */
-
-.hero {
-    min-height: 85vh;
-
-    background:
-        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
-        url("IMG_0171.jpeg");
-
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #666;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    color: white;
-    padding: 40px 20px;
-}
-
-.hero-content {
-    max-width: 950px;
-}
-
-.hero h1 {
-    font-size: 60px;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
-
-.hero h1 span {
-    color: #ef565a;
-}
-
-.hero p {
-    font-size: 22px;
-    margin-bottom: 35px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 7px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn-red {
-    background: #df494e;
-    color: white;
-}
-
-.btn-white {
-    background: white;
-    color: #111;
-}
-
-.btn:hover {
-    opacity: 0.88;
-}
-
-/* GENERAL SECTION */
-
-section {
-    padding: 85px 8%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title h2 {
-    font-size: 38px;
-    color: #0d1928;
-}
-
-.section-title p {
-    color: #666;
-    margin-top: 10px;
-}
-
-/* ABOUT */
-
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.about img {
-    width: 100%;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.18);
-}
-
-.about-text h2 {
-    font-size: 40px;
-    color: #0d1928;
-    margin-bottom: 20px;
-}
-
-.about-text h3 {
-    color: #df494e;
-    margin-bottom: 12px;
-}
-
-.about-text p {
-    margin-bottom: 18px;
-    color: #555;
-}
-
-/* SERVICES */
-
-.services-section {
-    background: #f5f7fa;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 25px;
-}
-
-.card {
-    background: white;
-    padding: 35px 25px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,.08);
-    transition: .3s;
-}
-
-.card:hover {
-    transform: translateY(-7px);
-}
-
-.card .icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    color: #0d1928;
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: #666;
-}
-
-/* JAPAN PROGRAM */
-
-.japan-program {
-    background: #0d1928;
-    color: white;
-}
-
-.japan-program .section-title h2 {
-    color: white;
-}
-
-.japan-program .section-title p {
-    color: #ddd;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 25px;
-}
-
-.step {
-    text-align: center;
-    padding: 25px;
-}
-
-.step-number {
-    width: 65px;
-    height: 65px;
-    background: #df494e;
-    margin: auto;
-    margin-bottom: 20px;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.step h3 {
-    margin-bottom: 10px;
-}
-
-/* COURSE */
-
-.course {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 50px;
-}
-
-.course img {
-    width: 100%;
-    border-radius: 18px;
-}
-
-.course-info h2 {
-    font-size: 38px;
-    color: #0d1928;
-    margin-bottom: 15px;
-}
-
-.course-info h3 {
-    color: #df494e;
-    margin-bottom: 20px;
-}
-
-.course-info ul {
-    margin: 25px 0;
-    padding-left: 22px;
-}
-
-.course-info li {
-    margin: 10px 0;
-}
-
-/* GALLERY */
-
-.gallery-section {
-    background: #f5f7fa;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 18px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: .3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.03);
-}
-
-/* CONTACT */
-
-.contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-}
-
-.contact-info {
-    background: #0d1928;
-    color: white;
-    padding: 45px;
-    border-radius: 18px;
-}
-
-.contact-info h2 {
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    margin: 18px 0;
-}
-
-.contact-box {
-    padding: 45px;
-    background: #f5f7fa;
-    border-radius: 18px;
-}
-
-.contact-box h2 {
-    margin-bottom: 20px;
-    color: #0d1928;
-}
-
-.contact-box input,
-.contact-box textarea {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    font-family: inherit;
-}
-
-.contact-box textarea {
-    height: 130px;
-    resize: vertical;
-}
-
-.contact-box button {
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/* WHATSAPP */
-
-.whatsapp {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-
-    width: 65px;
-    height: 65px;
-
-    background: #25D366;
-    color: white;
-
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-decoration: none;
-    font-size: 31px;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,.25);
-    z-index: 999;
-}
-
-/* FOOTER */
-
-footer {
-    background: #08111d;
-    color: #bbb;
-    text-align: center;
-    padding: 30px;
-}
-
-footer strong {
-    color: white;
-}
-
-/* MOBILE */
-
-@media(max-width: 900px) {
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YJ Institute</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background: #fff;
+    }
+
+    /* HEADER */
     header {
-        padding: 0 4%;
+      background: #ffffff;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #eee;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 11px;
+      color: #d64545;
+      margin-top: 3px;
     }
 
     nav {
-        gap: 12px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
     }
 
     nav a {
-        font-size: 13px;
+      text-decoration: none;
+      color: #222;
+      font-size: 14px;
+      font-weight: 600;
     }
 
+    nav a:hover {
+      color: #d64545;
+    }
+
+    .contact-btn {
+      background: linear-gradient(135deg, #e52d35, #f28a54);
+      color: #fff !important;
+      padding: 12px 20px;
+      border-radius: 8px;
+    }
+
+    /* HERO */
     .hero {
-        min-height: 75vh;
+      min-height: 580px;
+      padding: 70px 8%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(10,10,10,0.92) 0%,
+          rgba(10,10,10,0.78) 45%,
+          rgba(10,10,10,0.48) 100%
+        ),
+        url("IMG_3452.jpeg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-inner {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-left {
+      color: white;
+      max-width: 720px;
+    }
+
+    .small-title {
+      color: #f4c542;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
     }
 
     .hero h1 {
-        font-size: 42px;
+      font-size: 64px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+      font-weight: 800;
     }
 
     .hero p {
-        font-size: 18px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #f1f1f1;
+      max-width: 650px;
+      margin-bottom: 28px;
     }
 
-    .about,
-    .course,
-    .contact {
-        grid-template-columns: 1fr;
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .btn-red {
+      color: white;
+      background: linear-gradient(135deg, #e4262e, #ff544a);
+      box-shadow: 0 8px 20px rgba(228,38,46,0.28);
+    }
+
+    .btn-dark {
+      color: white;
+      border: 1px solid rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* CONTACT CARD */
+    .hero-card {
+      background: rgba(255,255,255,0.96);
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+      border-top: 4px solid #e64848;
+    }
+
+    .mini-circle {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .hero-card h3 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      color: #666;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .phone {
+      color: #d84242;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    /* MISSION */
+    .mission {
+      padding: 85px 8%;
+      background: white;
+      text-align: center;
+    }
+
+    .mission-label {
+      color: #d94b4b;
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .mission h2 {
+      font-size: 44px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .mission p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #666;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* SERVICES */
+    .services {
+      padding: 80px 8%;
+      background: #f7f7f7;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
     }
 
     .cards {
-        grid-template-columns: 1fr 1fr;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
-    .steps {
-        grid-template-columns: 1fr 1fr;
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* GALLERY */
+    .gallery-section {
+      padding: 80px 8%;
+      background: #fff;
     }
 
     .gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media(max-width: 600px) {
-
-    header {
-        height: auto;
-        padding: 15px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .logo {
-        font-size: 23px;
-    }
-
-    nav {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero {
-        min-height: 72vh;
-        background-size: cover;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    section {
-        padding: 65px 6%;
-    }
-
-    .cards,
-    .steps,
-    .gallery {
-        grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
     .gallery img {
-        height: auto;
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
     }
-}
 
-</style>
+    /* CONTACT */
+    .contact-section {
+      padding: 80px 8%;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .contact-section p {
+      margin-bottom: 25px;
+      color: #ddd;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero-card {
+        max-width: 500px;
+      }
+
+      .cards,
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 55px 6%;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .mission h2,
+      .section-title h2,
+      .contact-section h2 {
+        font-size: 32px;
+      }
+
+      .cards,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
-<header>
-
-<div class="logo">
-YJ <span>INSTITUTE</span>
-</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#course">Courses</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<h1>
-Your Future in <span>Japan</span><br>
-Starts Here
-</h1>
-
-<p>
-Professional guidance for students and skilled workers who want
-to study, work and build their future in Japan.
-</p>
-
-<a href="#services" class="btn btn-red">
-Explore Programs
-</a>
-
-<a href="#contact" class="btn btn-white">
-Contact Us
-</a>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="about">
-
-<div>
-<img src="IMG_2661.jpeg" alt="YJ Institute">
-</div>
-
-<div class="about-text">
-
-<h3>WELCOME TO YJ INSTITUTE</h3>
-
-<h2>Your Trusted Pathway to Japan</h2>
-
-<p>
-YJ Institute provides professional guidance and support for
-students and skilled workers who wish to build their future in Japan.
-</p>
-
-<p>
-From Japanese language education and exam preparation to student
-visa and SSW guidance, we support you throughout your journey.
-</p>
-
-<p>
-Our goal is to provide reliable information, quality education
-and professional support for every student.
-</p>
-
-<a href="#contact" class="btn btn-red">
-Talk to Us
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="services-section" id="services">
-
-<div class="section-title">
-
-<h2>Our Services</h2>
-
-<p>
-Everything you need to begin your journey to Japan.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-<div class="icon">🇯🇵</div>
-<h3>Japanese Language</h3>
-<p>
-Learn Japanese with structured lessons and professional guidance.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🎓</div>
-<h3>Student Visa Guidance</h3>
-<p>
-Support with school selection, documentation and the Japan student visa process.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<h3>SSW Programs</h3>
-<p>
-Guidance for candidates interested in Japan's Specified Skilled Worker pathway.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">❤️</div>
-<h3>Caregiver</h3>
-<p>
-Preparation and guidance for candidates interested in Japan's caregiving sector.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🏗️</div>
-<h3>Construction</h3>
-<p>
-Support and guidance for skilled workers interested in construction opportunities.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🍱</div>
-<h3>Food Service</h3>
-<p>
-Preparation and guidance for candidates interested in Japan's food service sector.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- JAPAN PATHWAY -->
-
-<section class="japan-program">
-
-<div class="section-title">
-
-<h2>Your Journey to Japan</h2>
-
-<p>
-We guide you step by step.
-</p>
-
-</div>
-
-<div class="steps">
-
-<div class="step">
-<div class="step-number">1</div>
-<h3>Contact Us</h3>
-<p>Tell us about your goals and future plans.</p>
-</div>
-
-<div class="step">
-<div class="step-number">2</div>
-<h3>Preparation</h3>
-<p>Language, exams and required documents.</p>
-</div>
-
-<div class="step">
-<div class="step-number">3</div>
-<h3>Application</h3>
-<p>Professional support throughout the application process.</p>
-</div>
-
-<div class="step">
-<div class="step-number">4</div>
-<h3>Japan</h3>
-<p>Start your new study or career journey in Japan.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- COURSE -->
-
-<section id="course">
-
-<div class="course">
-
-<div class="course-info">
-
-<h3>START YOUR JOURNEY</h3>
-
-<h2>Japanese Language & Japan Preparation</h2>
-
-<p>
-Build the knowledge and confidence you need before beginning
-your journey to Japan.
-</p>
-
-<ul>
-<li>Japanese language lessons</li>
-<li>JLPT preparation</li>
-<li>SSW exam guidance</li>
-<li>Student visa consultation</li>
-<li>Document preparation guidance</li>
-<li>Japan lifestyle and cultural guidance</li>
-</ul>
-
-<a href="#contact" class="btn btn-red">
-Join YJ Institute
-</a>
-
-</div>
-
-<div>
-<img src="IMG_3452.jpeg" alt="YJ Institute Course">
-</div>
-
-</div>
-
-</section>
-
-
-<!-- GALLERY -->
-
-<section class="gallery-section" id="gallery">
-
-<div class="section-title">
-
-<h2>Our Gallery</h2>
-
-<p>
-A glimpse of YJ Institute activities and our journey.
-</p>
-
-</div>
-
-<div class="gallery">
-
-<img src="IMG_3452.jpeg" alt="YJ Institute Gallery">
-<img src="IMG_3453.jpeg" alt="YJ Institute Gallery">
-<img src="IMG_3454.jpeg" alt="YJ Institute Gallery">
-
-<img src="IMG_3455.jpeg" alt="YJ Institute Gallery">
-<img src="IMG_3456.jpeg" alt="YJ Institute Gallery">
-<img src="IMG_3457.jpeg" alt="YJ Institute Gallery">
-
-<img src="IMG_3462.jpeg" alt="YJ Institute Gallery">
-<img src="d8e6e448-bedd-470f-9dd0-bd33b105ecc4.jpeg" alt="YJ Institute Gallery">
-<img src="IMG_0171.jpeg" alt="YJ Institute Gallery">
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="section-title">
-
-<h2>Contact YJ Institute</h2>
-
-<p>
-Ready to start your journey to Japan? Contact us today.
-</p>
-
-</div>
-
-<div class="contact">
-
-<div class="contact-info">
-
-<h2>Let's Talk</h2>
-
-<p>
-📍 Imaduwa, Sri Lanka
-</p>
-
-<p>
-📞 Sri Lanka: 077 202 8187
-</p>
-
-<p>
-📞 Japan: +81 80 3386 3351
-</p>
-
-<p>
-🇯🇵 Study • Work • Build Your Future in Japan
-</p>
-
-<a
-href="https://wa.me/94772028187"
-class="btn btn-red">
-Chat on WhatsApp
-</a>
-
-</div>
-
-
-<div class="contact-box">
-
-<h2>Send Us a Message</h2>
-
-<input id="name" type="text" placeholder="Your Name">
-
-<input id="phone" type="text" placeholder="Phone Number">
-
-<textarea id="message" placeholder="How can we help you?"></textarea>
-
-<button class="btn btn-red" onclick="sendWhatsApp()">
-Send via WhatsApp
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- WHATSAPP FLOATING BUTTON -->
-
-<a
-class="whatsapp"
-href="https://wa.me/94772028187"
-aria-label="WhatsApp">
-☎
-</a>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>
-© 2026 <strong>YJ Institute</strong>. All Rights Reserved.
-</p>
-
-<p>
-Your Pathway to Study & Work in Japan
-</p>
-
-</footer>
-
-
-<script>
-
-function sendWhatsApp() {
-
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let message = document.getElementById("message").value;
-
-    let text =
-        "Hello YJ Institute,%0A%0A" +
-        "Name: " + encodeURIComponent(name) + "%0A" +
-        "Phone: " + encodeURIComponent(phone) + "%0A" +
-        "Message: " + encodeURIComponent(message);
-
-    window.open(
-        "https://wa.me/94772028187?text=" + text,
-        "_blank"
-    );
-}
-
-</script>
+  <header>
+    <div class="brand">
+      YJ INSTITUTE
+      <span>JAPANESE LANGUAGE & STUDY PATHWAYS</span>
+    </div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#course">Course</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact" class="contact-btn">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-left">
+        <div class="small-title">
+          — Japanese Language & Study Pathways
+        </div>
+
+        <h1>
+          Your journey to Japan<br>
+          starts here.
+        </h1>
+
+        <p>
+          Language education, JLPT preparation, school guidance,
+          student visa support and career pathway assistance —
+          delivered with practical, personal guidance.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-red">
+            Start your enquiry →
+          </a>
+
+          <a href="https://wa.me/94772028187" class="btn btn-dark">
+            WhatsApp us
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="mini-circle">YJ</div>
+
+        <h3>Speak with our team</h3>
+
+        <p>
+          Get clear information about Japanese courses,
+          study pathways and your next application step.
+        </p>
+
+        <div class="phone">
+          +81 80-3386-3351
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="mission" id="about">
+    <div class="mission-label">— Our Mission</div>
+
+    <h2>
+      Guidance that prepares<br>
+      you for Japan
+    </h2>
+
+    <p>
+      YJ Institute supports students and skilled workers with
+      Japanese language education, study guidance and practical
+      preparation for their future in Japan.
+    </p>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Support for every stage of your journey.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Japanese Language</h3>
+        <p>
+          Structured Japanese lessons and preparation for JLPT exams.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Study in Japan</h3>
+        <p>
+          School selection, document guidance and student visa support.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>SSW Guidance</h3>
+        <p>
+          Support and preparation for Specified Skilled Worker pathways.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="gallery">
+    <div class="section-title">
+      <h2>Gallery</h2>
+      <p>YJ Institute activities and moments.</p>
+    </div>
+
+    <div class="gallery">
+      <img src="IMG_3452.jpeg" alt="">
+      <img src="IMG_3453.jpeg" alt="">
+      <img src="IMG_3454.jpeg" alt="">
+      <img src="IMG_3455.jpeg" alt="">
+      <img src="IMG_3456.jpeg" alt="">
+      <img src="IMG_3457.jpeg" alt="">
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h2>Start your journey with YJ Institute</h2>
+
+    <p>
+      Contact our team for Japanese language, study and work guidance.
+    </p>
+
+    <a href="https://wa.me/94772028187" class="btn btn-red">
+      Contact on WhatsApp
+    </a>
+  </section>
 
 </body>
 </html>
